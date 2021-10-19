@@ -17,10 +17,12 @@ class SongsController < ApplicationController
     # song.save
 
     song = Song.new(
+
       title: params[:input_title],
       album: params[:input_album],
       artist: params[:input_artist],
       year: params[:year]
+
     )
 
     song.save
@@ -44,6 +46,15 @@ class SongsController < ApplicationController
 
     render json:song.as_json
 
+  end
+
+  def destroy
+
+    song = Song.find_by(id: params[:id])
+    song.destroy
+
+    render json: song.as_json
+    
   end
 
 end
