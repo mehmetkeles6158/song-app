@@ -1,1 +1,27 @@
 GET http://localhost:3000/songs
+
+###
+GET http://localhost:3000/songs/1
+
+###
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+  "input_title": "Swing",
+  "input_album": "FIFA 20",
+  "input_artist": "Sofi Tucker",
+  "input_year": 2020
+}
+
+###
+
+PATCH http://localhost:3000/songs/4
+Content-Type: application/json
+
+{
+  "input_title": "Vamono"
+
+}
+
+
